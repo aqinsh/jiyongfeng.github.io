@@ -11,6 +11,7 @@ def correct(text):
         text_new.append('.')
     return ''.join(text_new)
 
+
 def first_word(text):
     old_list = list(text)
     j = []
@@ -19,6 +20,46 @@ def first_word(text):
             j.append(old_list[i])
             print(i)
     return ''.join(j)
-             
-x = first_word(',,, good morning ...')
-print(x)
+
+
+def first_word2(text):
+    """
+        returns the first word in a given text.
+        https://py.checkio.org/mission/first-word/solve/
+    """
+    m = text.lstrip(' ,.').split()[0]
+    n = m.split('.')[0].split(',')[0]
+    return n
+
+
+
+def best_stock(data):
+    """ 
+    You are given the current stock prices. 
+    You have to find out which stocks cost more. 
+    https://py.checkio.org/mission/best-stock/
+    """
+    n = data.values()
+    m = max(n)
+    for i in data.keys():
+        if data[i] == m:
+            return i
+
+
+def popular_words(text, words):
+    """ 
+    determine the popularity of certain words in the text
+    https://py.checkio.org/mission/popular-words/solve/
+     """
+    new_text = (text.lower()).split()
+    d = dict()
+    sum = [0 for x in range(len(words))]
+    for i in range(len(words)):
+        for j in new_text:
+            if words[i] == j.split(',')[0].split('.')[0]:
+                sum[i] += 1
+        d[words[i]] = sum[i]
+    return d
+
+
+
