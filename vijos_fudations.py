@@ -32,7 +32,6 @@ def first_word2(text):
     return n
 
 
-
 def best_stock(data):
     """ 
     You are given the current stock prices. 
@@ -62,4 +61,13 @@ def popular_words(text, words):
     return d
 
 
-
+def sum_numbers(x, y):
+    sum_num = 0
+    str1 = list(range(1, (x +1)))
+    for i in str1:
+        sum_num += str(i).count(str(y))
+    return sum_num
+x = input()
+m = int(x.split()[0])
+n = int(x.split()[1])
+print(sum_numbers(m, n))
