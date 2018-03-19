@@ -1,5 +1,8 @@
 
-""" 珠心算测验 """
+""" 
+珠心算测验
+
+"""
 n = int(input())
 l = input().split()
 l.sort()
