@@ -1,3 +1,5 @@
+import textwrap
+
 def swap_case(s):
     """ 
     You are given a string and your task is to swap cases. 
@@ -47,5 +49,14 @@ def count_substring(string, sub_string):
         count += 1
         string = string[(string.index(sub_string)+1):]
     return count
+
+
+def wrap(string, max_width):
+    """ 
+    You are given a string  and width . 
+    Your task is to wrap the string into a paragraph of width .
+    """
+    return textwrap.fill(string,max_width)
+
 
 
