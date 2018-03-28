@@ -1,5 +1,6 @@
 import textwrap
 
+
 def swap_case(s):
     """ 
     You are given a string and your task is to swap cases. 
@@ -56,7 +57,55 @@ def wrap(string, max_width):
     You are given a string  and width . 
     Your task is to wrap the string into a paragraph of width .
     """
-    return textwrap.fill(string,max_width)
+    return textwrap.fill(string, max_width)
 
 
+def print_formatted(number):
+    width = len(bin(number)) - 2
+    for i in range(1, number + 1):
+        print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(
+            i, width=width))
 
+
+def print_rangoli(size):
+    """ 
+    You are given an integer, . Your task is to print an alphabet rangoli of size . 
+    (Rangoli is a form of Indian folk art based on creation of patterns.)
+    """
+    for i in range(size):
+        s = "-".join(chr(ord('a')+size-j-1) for j in range(i+1))
+        print((s+s[::-1][1:]).center(size*4-3, '-'))
+
+    for i in range(size-1):
+        s = "-".join(chr(ord('a')+size-j-1) for j in range(size-i-1))
+        print((s+s[::-1][1:]).center(size*4-3, '-'))
+
+
+def capitalize(string):
+    return ' '.join(i.capitalize() for i in string.split(' '))
+
+
+def minion_game(string):
+    l = ['A', 'E', 'I', 'O', 'U']
+    s = list(string)
+    total_stuart = total_kevin = 0
+    for i in range(len(s)):
+        if s[i] in l:
+            total_kevin += len(s) - i
+        else:
+            total_stuart += len(s) - i
+    if total_stuart > total_kevin:
+        print('Stuart',total_stuart)
+    elif total_stuart < total_kevin:
+        print('Kevin',total_kevin)
+    else:
+        print('Draw')   
+
+
+def average(array):
+    """ 
+    Introduction to Sets
+    https://www.hackerrank.com/challenges/py-introduction-to-sets/problem
+     """
+    return sum(set(array)) / len(set(array))
+    
