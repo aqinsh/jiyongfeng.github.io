@@ -169,4 +169,4 @@ for i in range(10):
     x = 0.0
     x += stop - start
     print('Program Excuted in {:.5f}'.format(stop - start))
-print('The average program excute time is {:.5f}'.format(x/10))
+print('The average program excute-time is {:.5f}'.format(x/10))
