@@ -1,3 +1,4 @@
+
 l = int(input('Please input the total count of this month:'))
 sum = 0
 if l <= 100000:

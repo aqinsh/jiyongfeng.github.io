@@ -1,6 +1,4 @@
-string = 'hello world'
-l = string.split()
-new_list = []
-for i in l:
-    new_list.append(i.swapcase())
+number = 42
+print(0 - number)
+
     
