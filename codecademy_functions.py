@@ -101,9 +101,3 @@ def median(sequence_list):
     else:
         location_value = sequence_list[(list_lenth + 1) / 2 - 1]
     return location_value
-
-
-x = [1]
-y = 7
-for i
-print(censor(x, y))
