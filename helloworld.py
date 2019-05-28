@@ -11,8 +11,9 @@ def between_markers(text: str, begin: str, end: str) -> str:
         end_index = text.find(end)
     else:
         end_index = len(text)
-    
+
     return text[begin_index:end_index]
+
 
 s = between_markers('What is >apple<', '>', '<')
 print(s)
