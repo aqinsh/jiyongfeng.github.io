@@ -1,4 +1,8 @@
-﻿import math
+﻿"""
+https://github.com/jackfrued/Python-100-Days/
+练手用
+CreateDate: 2019-06-12
+import math
 
 
 def area_round(radius):
