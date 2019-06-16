@@ -1,6 +1,7 @@
 ﻿"""
 https://github.com/jackfrued/Python-100-Days/
 练手用
+
 CreateDate: 2019-06-12
 """
 
@@ -13,11 +14,15 @@ import random
 def area_round(radius):
     """
     计算圆的面积
-    Version: 0.11
-    Author:Steven
-    Date: 2019-06-12
+
+    Args:
+        radius: 圆的半径
+    
+    Returns:
+        圆面积，格式化输出，保留小数点3位
     """
-    return math.pi * (radius ** 2)
+    s = math.pi * (radius ** 2)
+    return '{:.3f}'.format(s)
 
 
 def perimeter_round(radius):
@@ -87,19 +92,19 @@ def perfect_number(n):
         n:数字的位数，比如n=3表示需要找所有从100~999中符合的完全数
 
     Returns:
+        返回符合的所有数字，以列表显示
 
     """
     total = []
-    temp = 0
     for x in range(10 ** (n-1), 10 ** n):
-        for i in range(1, int(x/2)):
+        temp = 0
+        for i in range(1, x // 2 + 1):
             if x % i == 0:
                 temp += i
                 # print(temp)
         if temp == x:
             # print(x)
             total.append(x)
-            temp = 0
     return total
 
 
@@ -113,7 +118,6 @@ def baijibaiqian():
 
     Returns:
         返回所有解
-
     """
 
     for i in range(100):
@@ -160,8 +164,7 @@ def maxnumber(l):
 
 
 def main():
-    s = int(input('Please input a number:'))
-    print(perfect_number(s))
+    print(area_round(float(input('Please input the round\'s radius:'))))
 
 
 if __name__ == "__main__":
