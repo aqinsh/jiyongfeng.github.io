@@ -22,6 +22,12 @@ def split_and_join(line):
     """ 
     You are given a string. Split the string on a " " (space) 
     delimiter and join using a - hyphen.
+
+    Args:
+        line: the string need to be splited
+    
+    Returns:
+        splited string with '-'
     """
     return '-'.join(line.split(' '))
 
