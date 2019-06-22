@@ -35,6 +35,14 @@ def mutate_string(string, position, character):
     """ 
     Read a given string, change the character at a 
     given index and then print the modified string.
+
+    Args:
+        string: given a string
+        position: the position where need to change
+        character: the character that to be changed
+
+    Returns:
+        the modified string
     """
     return string[:position] + character + string[(position + 1):]
 
