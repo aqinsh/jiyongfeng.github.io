@@ -5,10 +5,14 @@ def test(s):
         for i in range(lenth-2):
             if ss[i].isalpha() and ss[i+1].isalpha() and ss[i+2].isalpha():
                 break
-                return True
+                print("good!")
+                # return True
+        
+        print("not good!")
     else:
-        return False
+        print("bad!")
+        # return False
 
 
-s = "a bb1 cc 33 ccc"
-print(test(s))
+s11 = "a bb1 cc"
+test(s11)
